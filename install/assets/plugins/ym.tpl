@@ -1,21 +1,20 @@
-<?php
-//0.1
-//noname
-//12-12-2012
+//<?php
+/**
+ * YandexMetrika
+ * 
+ * YandexMetrika
+ *
+ * @category    plugin
+ * @version     0.1
+ * @license     http://www.gnu.org/copyleft/gpl.html GNU Public License (GPL)
+ * @internal    @properties &account=Account ID;string;000000 &testMode=Тестовый режим;list;true,false;false &clickmap=Карта кликов;list;true,false;true &tracklinks=Внешние ссылки;list;true,false;true &async=Асинхронный код;list;true,false;true
+ * @internal    @events OnWebPagePrerender
+ * @internal    @modx_category Content
+ * @internal    @legacy_names YandexMetrika
+ * @internal    @installset base, sample
+ */
 
-&account=Account ID;string;000000
-&testMode=Тестовый режим;list;true,false;false
-&clickmap=Карта кликов;list;true,false;true
-&tracklinks=Внешние ссылки;list;true,false;true
-&async=Асинхронный код;list;true,false;true
-
- Ставим галку на пункте OnWebPagePrerender в разделе Template Service Events
-
- 2.1. Во вкладке Сайт меняем значение radiobutton Регистрировать посещения на Да
-
- 
-
-
+//Во вкладке Сайт меняем значение radiobutton Регистрировать посещения на Да
 // Is stats tracking turned on in the Site Config?
 if ($modx->getConfig('track_visitors') != 1) {
     return; 
